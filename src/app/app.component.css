@@ -1,0 +1,11 @@
+p {
+  font-family: Lato;
+}
+.bordered {
+ border: 1px dashed black;
+ background-color: #eee; 
+ }
+
+ .example-card {
+  max-width: 400px;
+}

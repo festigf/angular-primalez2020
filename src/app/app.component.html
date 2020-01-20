@@ -1,0 +1,72 @@
+<hello name="{{ name }}"></hello>
+
+<mat-card class="example-card">
+	<mat-card-header>
+		<div mat-card-avatar class="example-header-image"></div>
+		<mat-card-title>Esempio card material</mat-card-title>
+		<mat-card-subtitle>input nome</mat-card-subtitle>
+	</mat-card-header>
+
+	<mat-form-field class="example-full-width">
+		<input matInput placeholder="Inserire il nome" value="Pippo" type="text" [(ngModel)]="name">
+
+  </mat-form-field>
+		<button mat-raised-button color="primary" (click)="onClick()">ok</button>
+</mat-card>
+<!--<button (click)="onClick()">ok</button>-->
+<p>
+	Start editing to see some magic happen :)
+</p>
+<div *ngIf="a < b"> prova a={{importo}} b={{b}} </div>
+{{name}}
+{{importo}}
+<app-prova></app-prova>
+<ul>
+	<li *ngFor="let e of stringhe">
+		{{e}}
+		{{p.ageInYears(20)}}
+	</li>
+</ul>
+{{importo}}
+
+
+<div *ngIf="a < b"> prova a={{importo}} b={{b}} </div> <!-- displayed if a is more than b -->
+<div *ngIf="str == 'yes'"></div> <!-- displayed if str is the string "yes" -->
+<div *ngIf="myFunc()"></div>
+
+<ng-if-else></ng-if-else>
+
+<div class="container" [ngSwitch]="myVar">
+	<div *ngSwitchCase="'A'">Var is A</div>
+	<div *ngSwitchCase="'B'">Var is B</div>
+	<div *ngSwitchCase="'C'">Var is C</div>
+	<div *ngSwitchDefault>Var is something else</div>
+</div>
+
+<app-esempio-switch></app-esempio-switch>
+
+<div class="ui input">
+	<input type="text" name="color" value="{{color}}" #colorinput>
+ </div>
+
+	<div class="ui input">
+		<input type="text" name="fontSize" value="{{fontSize}}" #fontinput>
+ </div>
+
+		<button class="ui primary button" (click)="apply(colorinput.value, fontinput.value)">
+ Apply settings
+ </button>
+		<div>
+			<span [ngStyle]="{color: 'red'}" [style.font-size.px]="fontSize">
+        red text
+      </span>
+		</div>
+		<div>
+			<span [style.background-color]="color" [style.font-size.px]="fontSize">
+       colored text
+      </span>
+		</div>
+		<div [ngClass]="{bordered: false}">This is never bordered</div>
+		<div [ngClass]="{bordered: true}">This is always bordered</div>
+
+		<app-ng-class-example setBorder="setBorder"></app-ng-class-example>

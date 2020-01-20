@@ -1,0 +1,9 @@
+<div [ngClass]="classesObj">
+  
+ Using object var. Border {{ classesObj.bordered ? "ON" : "OFF" }}
+  </div>
+  <button (click)="toggleBorder()">border</button>
+
+  <div [ngClass]="{bordered: isBordered}">
+    altra classe bordered {{setBorder}}
+  </div>
